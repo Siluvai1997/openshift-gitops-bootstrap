@@ -1,0 +1,5 @@
+---
+- name: Install ArgoCD
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('file', 'manifests/argocd-install.yaml') }}"

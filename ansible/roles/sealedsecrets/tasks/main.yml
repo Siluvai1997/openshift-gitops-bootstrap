@@ -1,0 +1,5 @@
+---
+- name: Install Sealed Secrets Controller
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('file', 'manifests/sealedsecrets-controller.yaml') }}"

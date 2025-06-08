@@ -1,0 +1,12 @@
+---
+- name: Bootstrap OpenShift GitOps
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Include ArgoCD installation
+      include_role:
+        name: argocd
+
+    - name: Include Sealed Secrets installation
+      include_role:
+        name: sealedsecrets
